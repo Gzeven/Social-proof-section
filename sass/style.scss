@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+$very-dark-magenta: hsl(300, 43%, 22%);
+$soft-pink: hsl(333, 80%, 67%);
+$dark-grayish-magenta: hsl(303, 10%, 53%);
+$light-grayish-magenta: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+
+@keyframes addStar {
+  0% {
+    color: black;
+  }
+
+  75% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    color: #ef9546;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInFromAbove {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  height: 100%;
+  width: auto;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  background-image: url("/images/bg-pattern-top-mobile.svg"),
+    url("/images/bg-pattern-bottom-mobile.svg");
+  background-position: left top, right bottom;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.intro {
+  text-align: center;
+  margin: 5rem 1.5rem 2rem;
+  h1 {
+    color: $very-dark-magenta;
+    font-size: 8.533vw;
+    animation: 1s ease-out 0s 1 slideInFromAbove;
+  }
+  p {
+    color: $dark-grayish-magenta;
+    font-size: 3.8vw;
+    animation: 1s ease-out 0s 1 slideInFromAbove;
+  }
+}
+
+.stars {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: 1s ease-out 0s 1 slideInFromAbove;
+
+  .five-stars-review {
+    background-color: $light-grayish-magenta;
+    border-radius: 5%;
+    margin-top: 1rem;
+    padding: 1rem;
+    h3 {
+      color: $very-dark-magenta;
+      font-size: 3.5vw;
+      padding-top: 1rem;
+      margin: 0;
+    }
+    .five-stars {
+      margin-top: 0.5rem;
+    }
+  }
+  .star-one {
+    color: black;
+    animation-name: addStar;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  .star-two {
+    color: black;
+    animation-name: addStar;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+  }
+  .star-three {
+    color: black;
+    animation-name: addStar;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  .star-four {
+    color: black;
+    animation-name: addStar;
+    animation-duration: 1s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+  }
+  .star-five {
+    color: black;
+    animation-name: addStar;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: $white;
+  margin: 0 1.5rem;
+
+  .review-one {
+    opacity: 0;
+    animation: 1s ease-out 0s 1 slideInFromRight;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  .review-two {
+    opacity: 0;
+    animation: 1s ease-out 0s 1 slideInFromRight;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  .review-three {
+    opacity: 0;
+    animation: 1s ease-out 0s 1 slideInFromRight;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .review {
+    background-color: $very-dark-magenta;
+    border-radius: 5%;
+    padding: 1.5rem;
+    margin-top: 1rem;
+
+    .person {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .person-data {
+        h3 {
+          font-size: 3.7vw;
+
+          span {
+            color: $soft-pink;
+            font-weight: 300;
+          }
+        }
+      }
+
+      img {
+        height: auto;
+        max-width: 100%;
+        width: 15%;
+        border-radius: 50%;
+        margin-right: 1.5rem;
+      }
+    }
+    .review-text {
+      font-size: 3.7vw;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+@media only screen and (min-width: 376px) {
+  body {
+    background-image: url("/images/bg-pattern-top-desktop.svg"),
+      url("/images/bg-pattern-bottom-desktop.svg");
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 45%, 85%;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .intro {
+    display: flex;
+    justify-content: space-between;
+    margin: 11% 11% 5%;
+    .intro-text {
+      width: 40%;
+      text-align: left;
+      h1 {
+        font-size: 3vw;
+        margin: 0;
+      }
+      p {
+        font-size: 1vw;
+        line-height: 1.8;
+      }
+    }
+    .stars {
+      width: 48%;
+
+      .first-stars {
+        align-self: flex-start;
+      }
+
+      .second-stars {
+        align-self: center;
+      }
+
+      .third-stars {
+        align-self: flex-end;
+      }
+
+      .five-stars-review {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        padding: 3% 6%;
+        margin: 2% 0%;
+        width: 85%;
+        height: 25%;
+
+        h3 {
+          font-size: 1vw;
+          padding-top: 0;
+          margin-left: 5%;
+        }
+        .five-stars {
+          margin: 0;
+          .fa-star {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+  .reviews {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 10%;
+
+    .review-one {
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
+
+    .review-two {
+      margin: 1rem 0 1rem;
+    }
+
+    .review-three {
+      margin-top: 2rem;
+    }
+    .review {
+      border-radius: 0.5rem;
+      padding: 2.5%;
+
+      width: 31.5%;
+
+      .person {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .person-data {
+          h3 {
+            font-size: 1vw;
+          }
+        }
+
+        img {
+          width: 15%;
+          margin-right: 1.5rem;
+        }
+      }
+      .review-text {
+        font-size: 0.95vw;
+        line-height: 1.8;
+      }
+    }
+  }
+}

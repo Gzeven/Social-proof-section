@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+@keyframes addStar {
+  0% {
+    color: black;
+  }
+  75% {
+    transform: scale(1.5);
+  }
+  100% {
+    color: #ef9546;
+    transform: scale(1);
+  }
+}
+@keyframes slideInFromAbove {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+img {
+  height: 100%;
+  width: auto;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  background-image: url("/images/bg-pattern-top-mobile.svg"), url("/images/bg-pattern-bottom-mobile.svg");
+  background-position: left top, right bottom;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.intro {
+  text-align: center;
+  margin: 5rem 1.5rem 2rem;
+}
+.intro h1 {
+  color: #502050;
+  font-size: 8.533vw;
+  animation: 1s ease-out 0s 1 slideInFromAbove;
+}
+.intro p {
+  color: #937b92;
+  font-size: 3.8vw;
+  animation: 1s ease-out 0s 1 slideInFromAbove;
+}
+
+.stars {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: 1s ease-out 0s 1 slideInFromAbove;
+}
+.stars .five-stars-review {
+  background-color: #f7f2f7;
+  border-radius: 5%;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+.stars .five-stars-review h3 {
+  color: #502050;
+  font-size: 3.5vw;
+  padding-top: 1rem;
+  margin: 0;
+}
+.stars .five-stars-review .five-stars {
+  margin-top: 0.5rem;
+}
+.stars .star-one {
+  color: black;
+  animation-name: addStar;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.stars .star-two {
+  color: black;
+  animation-name: addStar;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+.stars .star-three {
+  color: black;
+  animation-name: addStar;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+.stars .star-four {
+  color: black;
+  animation-name: addStar;
+  animation-duration: 1s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+}
+.stars .star-five {
+  color: black;
+  animation-name: addStar;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: white;
+  margin: 0 1.5rem;
+}
+.reviews .review-one {
+  opacity: 0;
+  animation: 1s ease-out 0s 1 slideInFromRight;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+.reviews .review-two {
+  opacity: 0;
+  animation: 1s ease-out 0s 1 slideInFromRight;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+.reviews .review-three {
+  opacity: 0;
+  animation: 1s ease-out 0s 1 slideInFromRight;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+.reviews .review {
+  background-color: #502050;
+  border-radius: 5%;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+.reviews .review .person {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.reviews .review .person .person-data h3 {
+  font-size: 3.7vw;
+}
+.reviews .review .person .person-data h3 span {
+  color: #ee68a4;
+  font-weight: 300;
+}
+.reviews .review .person img {
+  height: auto;
+  max-width: 100%;
+  width: 15%;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}
+.reviews .review .review-text {
+  font-size: 3.7vw;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #3e52a3;
+}
+
+@media only screen and (min-width: 376px) {
+  body {
+    background-image: url("/images/bg-pattern-top-desktop.svg"), url("/images/bg-pattern-bottom-desktop.svg");
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 45%, 85%;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  .intro {
+    display: flex;
+    justify-content: space-between;
+    margin: 11% 11% 5%;
+  }
+  .intro .intro-text {
+    width: 40%;
+    text-align: left;
+  }
+  .intro .intro-text h1 {
+    font-size: 3vw;
+    margin: 0;
+  }
+  .intro .intro-text p {
+    font-size: 1vw;
+    line-height: 1.8;
+  }
+  .intro .stars {
+    width: 48%;
+  }
+  .intro .stars .first-stars {
+    align-self: flex-start;
+  }
+  .intro .stars .second-stars {
+    align-self: center;
+  }
+  .intro .stars .third-stars {
+    align-self: flex-end;
+  }
+  .intro .stars .five-stars-review {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3% 6%;
+    margin: 2% 0%;
+    width: 85%;
+    height: 25%;
+  }
+  .intro .stars .five-stars-review h3 {
+    font-size: 1vw;
+    padding-top: 0;
+    margin-left: 5%;
+  }
+  .intro .stars .five-stars-review .five-stars {
+    margin: 0;
+  }
+  .intro .stars .five-stars-review .five-stars .fa-star {
+    font-size: 15px;
+  }
+
+  .reviews {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 10%;
+  }
+  .reviews .review-one {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .reviews .review-two {
+    margin: 1rem 0 1rem;
+  }
+  .reviews .review-three {
+    margin-top: 2rem;
+  }
+  .reviews .review {
+    border-radius: 0.5rem;
+    padding: 2.5%;
+    width: 31.5%;
+  }
+  .reviews .review .person {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .reviews .review .person .person-data h3 {
+    font-size: 1vw;
+  }
+  .reviews .review .person img {
+    width: 15%;
+    margin-right: 1.5rem;
+  }
+  .reviews .review .review-text {
+    font-size: 0.95vw;
+    line-height: 1.8;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
