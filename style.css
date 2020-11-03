@@ -74,7 +74,7 @@ body {
 }
 .stars .five-stars-review {
   background-color: #f7f2f7;
-  border-radius: 5%;
+  border-radius: 0.5rem;
   margin-top: 1rem;
   padding: 1rem;
 }
