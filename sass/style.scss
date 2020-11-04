@@ -66,16 +66,19 @@ body {
 
 .intro {
   text-align: center;
-  margin: 5rem 1.5rem 2rem;
-  h1 {
-    color: $very-dark-magenta;
-    font-size: 8.533vw;
-    animation: 1s ease-out 0s 1 slideInFromAbove;
-  }
-  p {
-    color: $dark-grayish-magenta;
-    font-size: 3.8vw;
-    animation: 1s ease-out 0s 1 slideInFromAbove;
+  margin: 5rem 1.5rem 1.5rem;
+  .intro-text {
+    margin-bottom: 2.5rem;
+    h1 {
+      color: $very-dark-magenta;
+      font-size: 8.5vw;
+      animation: 1s ease-out 0s 1 slideInFromAbove;
+    }
+    p {
+      color: $dark-grayish-magenta;
+      font-size: 3.8vw;
+      animation: 1s ease-out 0s 1 slideInFromAbove;
+    }
   }
 }
 
@@ -88,8 +91,9 @@ body {
   .five-stars-review {
     background-color: $light-grayish-magenta;
     border-radius: 0.5rem;
-    margin-top: 1rem;
+    margin-bottom: 1rem;
     padding: 1rem;
+
     h3 {
       color: $very-dark-magenta;
       font-size: 3.5vw;
@@ -169,8 +173,8 @@ body {
 
   .review {
     background-color: $very-dark-magenta;
-    border-radius: 5%;
-    padding: 1.5rem;
+    border-radius: 0.5rem;
+    padding: 1.5rem 2rem;
     margin-top: 1rem;
 
     .person {
@@ -181,7 +185,6 @@ body {
       .person-data {
         h3 {
           font-size: 3.7vw;
-
           span {
             color: $soft-pink;
             font-weight: 300;
@@ -199,6 +202,7 @@ body {
     }
     .review-text {
       font-size: 3.7vw;
+      font-weight: 500;
     }
   }
 }
@@ -217,29 +221,30 @@ body {
       url("/images/bg-pattern-bottom-desktop.svg");
     background-position: left top, right bottom;
     background-repeat: no-repeat, no-repeat;
-    background-size: 45%, 85%;
+    background-size: 50%, 95%;
   }
 }
 
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 1250px) {
   .intro {
     display: flex;
     justify-content: space-between;
-    margin: 11% 11% 5%;
+    margin: 11rem 8.5rem 2rem;
     .intro-text {
       width: 40%;
       text-align: left;
       h1 {
-        font-size: 3vw;
+        font-size: 3.4vw;
         margin: 0;
       }
       p {
-        font-size: 1vw;
+        font-size: 1.04vw;
         line-height: 1.8;
       }
     }
     .stars {
-      width: 48%;
+      width: 50%;
+      height: 12.5rem;
 
       .first-stars {
         align-self: flex-start;
@@ -257,16 +262,14 @@ body {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-
-        padding: 3% 6%;
-        margin: 2% 0%;
-        width: 85%;
-        height: 25%;
+        width: 80%;
+        height: 3.5rem;
+        padding: 2rem;
 
         h3 {
           font-size: 1vw;
           padding-top: 0;
-          margin-left: 5%;
+          margin-left: 2rem;
         }
         .five-stars {
           margin: 0;
@@ -280,7 +283,7 @@ body {
   .reviews {
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 10%;
+    margin: 0 8.5rem;
 
     .review-one {
       margin-top: 0;
@@ -296,7 +299,7 @@ body {
     }
     .review {
       border-radius: 0.5rem;
-      padding: 2.5%;
+      padding: 2rem 1.5rem;
 
       width: 31.5%;
 

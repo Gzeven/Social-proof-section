@@ -53,14 +53,17 @@ body {
 
 .intro {
   text-align: center;
-  margin: 5rem 1.5rem 2rem;
+  margin: 5rem 1.5rem 1.5rem;
 }
-.intro h1 {
+.intro .intro-text {
+  margin-bottom: 2.5rem;
+}
+.intro .intro-text h1 {
   color: #502050;
-  font-size: 8.533vw;
+  font-size: 8.5vw;
   animation: 1s ease-out 0s 1 slideInFromAbove;
 }
-.intro p {
+.intro .intro-text p {
   color: #937b92;
   font-size: 3.8vw;
   animation: 1s ease-out 0s 1 slideInFromAbove;
@@ -75,7 +78,7 @@ body {
 .stars .five-stars-review {
   background-color: #f7f2f7;
   border-radius: 0.5rem;
-  margin-top: 1rem;
+  margin-bottom: 1rem;
   padding: 1rem;
 }
 .stars .five-stars-review h3 {
@@ -150,8 +153,8 @@ body {
 }
 .reviews .review {
   background-color: #502050;
-  border-radius: 5%;
-  padding: 1.5rem;
+  border-radius: 0.5rem;
+  padding: 1.5rem 2rem;
   margin-top: 1rem;
 }
 .reviews .review .person {
@@ -175,6 +178,7 @@ body {
 }
 .reviews .review .review-text {
   font-size: 3.7vw;
+  font-weight: 500;
 }
 
 .attribution {
@@ -190,29 +194,30 @@ body {
     background-image: url("/images/bg-pattern-top-desktop.svg"), url("/images/bg-pattern-bottom-desktop.svg");
     background-position: left top, right bottom;
     background-repeat: no-repeat, no-repeat;
-    background-size: 45%, 85%;
+    background-size: 50%, 95%;
   }
 }
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 1250px) {
   .intro {
     display: flex;
     justify-content: space-between;
-    margin: 11% 11% 5%;
+    margin: 11rem 8.5rem 2rem;
   }
   .intro .intro-text {
     width: 40%;
     text-align: left;
   }
   .intro .intro-text h1 {
-    font-size: 3vw;
+    font-size: 3.4vw;
     margin: 0;
   }
   .intro .intro-text p {
-    font-size: 1vw;
+    font-size: 1.04vw;
     line-height: 1.8;
   }
   .intro .stars {
-    width: 48%;
+    width: 50%;
+    height: 12.5rem;
   }
   .intro .stars .first-stars {
     align-self: flex-start;
@@ -227,15 +232,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 3% 6%;
-    margin: 2% 0%;
-    width: 85%;
-    height: 25%;
+    width: 80%;
+    height: 3.5rem;
+    padding: 2rem;
   }
   .intro .stars .five-stars-review h3 {
     font-size: 1vw;
     padding-top: 0;
-    margin-left: 5%;
+    margin-left: 2rem;
   }
   .intro .stars .five-stars-review .five-stars {
     margin: 0;
@@ -247,7 +251,7 @@ body {
   .reviews {
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 10%;
+    margin: 0 8.5rem;
   }
   .reviews .review-one {
     margin-top: 0;
@@ -261,7 +265,7 @@ body {
   }
   .reviews .review {
     border-radius: 0.5rem;
-    padding: 2.5%;
+    padding: 2rem 1.5rem;
     width: 31.5%;
   }
   .reviews .review .person {
