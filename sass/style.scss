@@ -6,27 +6,74 @@ $dark-grayish-magenta: hsl(303, 10%, 53%);
 $light-grayish-magenta: hsl(300, 24%, 96%);
 $white: hsl(0, 0%, 100%);
 
+@-webkit-keyframes addStar {
+  0% {
+    color: black;
+  }
+
+  75% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+
+  100% {
+    color: #ef9546;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 @keyframes addStar {
   0% {
     color: black;
   }
 
   75% {
+    -webkit-transform: scale(1.5);
     transform: scale(1.5);
   }
 
   100% {
     color: #ef9546;
+    -webkit-transform: scale(1);
     transform: scale(1);
+  }
+}
+
+@-webkit-keyframes slideInFromAbove {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
 @keyframes slideInFromAbove {
   0% {
+    -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
     opacity: 0;
   }
   100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideInFromRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
   }
@@ -34,16 +81,19 @@ $white: hsl(0, 0%, 100%);
 
 @keyframes slideInFromRight {
   0% {
+    -webkit-transform: translateX(100%);
     transform: translateX(100%);
     opacity: 0;
   }
   100% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
   }
 }
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -72,20 +122,30 @@ body {
     h1 {
       color: $very-dark-magenta;
       font-size: 8.5vw;
+      -webkit-animation: 1s ease-out 0s 1 slideInFromAbove;
       animation: 1s ease-out 0s 1 slideInFromAbove;
     }
     p {
       color: $dark-grayish-magenta;
       font-size: 3.8vw;
+      -webkit-animation: 1s ease-out 0s 1 slideInFromAbove;
       animation: 1s ease-out 0s 1 slideInFromAbove;
     }
   }
 }
 
 .stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-animation: 1s ease-out 0s 1 slideInFromAbove;
   animation: 1s ease-out 0s 1 slideInFromAbove;
 
   .five-stars-review {
@@ -106,45 +166,70 @@ body {
   }
   .star-one {
     color: black;
+    -webkit-animation-name: addStar;
     animation-name: addStar;
+    -webkit-animation-delay: 1s;
     animation-delay: 1s;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
   }
 
   .star-two {
     color: black;
+    -webkit-animation-name: addStar;
     animation-name: addStar;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-delay: 1.5s;
     animation-delay: 1.5s;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
   }
   .star-three {
     color: black;
+    -webkit-animation-name: addStar;
     animation-name: addStar;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-delay: 2s;
     animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
   }
 
   .star-four {
     color: black;
+    -webkit-animation-name: addStar;
     animation-name: addStar;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-delay: 2.5s;
     animation-delay: 2.5s;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
   }
   .star-five {
     color: black;
+    -webkit-animation-name: addStar;
     animation-name: addStar;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-delay: 3s;
     animation-delay: 3s;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
   }
 }
 
 .reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   text-align: left;
   color: $white;
@@ -152,22 +237,31 @@ body {
 
   .review-one {
     opacity: 0;
+    -webkit-animation: 1s ease-out 0s 1 slideInFromRight;
     animation: 1s ease-out 0s 1 slideInFromRight;
+    -webkit-animation-delay: 1s;
     animation-delay: 1s;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
   }
 
   .review-two {
     opacity: 0;
+    -webkit-animation: 1s ease-out 0s 1 slideInFromRight;
     animation: 1s ease-out 0s 1 slideInFromRight;
+    -webkit-animation-delay: 2s;
     animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
   }
 
   .review-three {
     opacity: 0;
+    -webkit-animation: 1s ease-out 0s 1 slideInFromRight;
     animation: 1s ease-out 0s 1 slideInFromRight;
+    -webkit-animation-delay: 3s;
     animation-delay: 3s;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
   }
 
@@ -178,8 +272,14 @@ body {
     margin-top: 1rem;
 
     .person {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
       justify-content: flex-start;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
 
       .person-data {
@@ -227,7 +327,11 @@ body {
 
 @media only screen and (min-width: 1250px) {
   .intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin: 11rem 8.5rem 2rem;
     .intro-text {
@@ -247,20 +351,30 @@ body {
       height: 12.5rem;
 
       .first-stars {
+        -ms-flex-item-align: start;
         align-self: flex-start;
       }
 
       .second-stars {
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
         align-self: center;
       }
 
       .third-stars {
+        -ms-flex-item-align: end;
         align-self: flex-end;
       }
 
       .five-stars-review {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
         width: 80%;
         height: 3.5rem;
@@ -281,7 +395,12 @@ body {
     }
   }
   .reviews {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin: 0 8.5rem;
 
@@ -304,8 +423,14 @@ body {
       width: 31.5%;
 
       .person {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
 
         .person-data {
